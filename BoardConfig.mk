@@ -22,10 +22,10 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt device/samsung/j3x3g/prebuilt/dt.img
 
 # prebuilt kernel
-TARGET_PREBUILT_KERNEL := device/samsung/j3x3g/prebuilt/kernel
+TARGET_KERNEL_CONFIG := j3x3g-dt_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/j3x3g
 
-
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 17690624 # We use fake partition size for now
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15080616 
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_USERIMAGES_USE_EXT4 := true
